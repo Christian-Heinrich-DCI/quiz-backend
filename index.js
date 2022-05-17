@@ -19,9 +19,13 @@ const quizSchema = new Schema({
     },
   ],
 });
+const Quiz = mongoose.model("Question", quizSchema, "questions");
 
-app.get("/questions", (req, res) => {
-  res.send("Working!");
+app.get("/questions", async (req, res) => {
+  await mongoose.connect(mongo_connect);
+  const questions = await Quiz.find();
+  //   console.log(questions);
+  res.json(questions);
 });
 
 app.listen(port, () => {
