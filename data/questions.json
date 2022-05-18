@@ -1,20 +1,184 @@
-[{
-  "_id": {
-    "$oid": "6283617d8247b69802b6af5d"
+[
+  {
+    "question": "Was ist ein Hook in React?",
+    "answers": [
+      {
+        "answer": "Ein Haken als Grafik-Symbol",
+        "points": 0
+      },
+      {
+        "answer": "Ein Konzept in React, um \"Stateful\" Logik auszulagern",
+        "points": 1
+      },
+      {
+        "answer": "Eine funktionale Komponente, die einen oder mehrere Status verwalten kann",
+        "points": 1
+      }
+    ]
   },
-  "question": "Was ist ein State (im Kontext der Webentwicklung)?",
-  "answers": [
-    {
-      "answer": "ein Bundesland",
-      "points": 0
-    },
-    {
-      "answer": "ein von React verwalteter Zustand",
-      "points": 1
-    },
-    {
-      "answer": "ein Datentyp",
-      "points": 0
-    }
-  ]
-}]
+  {
+    "question": "Was bedeutet CRUD?",
+    "answers": [
+      {
+        "answer": "Create, Read, Update, Delete",
+        "points": 1
+      },
+      {
+        "answer": "Call, Read, Update, Defer",
+        "points": 0
+      },
+      {
+        "answer": "Cowboy, Ranch, Upcoming, Doom",
+        "points": 0
+      }
+    ]
+  },
+  {
+    "question": "Was ist ein Product Backlog?",
+    "answers": [
+      {
+        "answer": "Eine Liste aller Bugs, die bei der Entwicklung eines Produkts entstehen",
+        "points": 0
+      },
+      {
+        "answer": "Eine Liste aller Features, die ein Produkt hat oder bekommen soll ",
+        "points": 1
+      },
+      {
+        "answer": "Eine Liste aller Fehlermeldungen bei der Entwicklung einer App",
+        "points": 0
+      }
+    ]
+  },
+  {
+    "question": "Welche Scrum-Events (Scrum-Ereignisse) gibt es?",
+    "answers": [
+      {
+        "answer": "Daily Scrum",
+        "points": 1
+      },
+      {
+        "answer": "Weekly Scrum",
+        "points": 0
+      },
+      {
+        "answer": "Sprint planning",
+        "points": 1
+      },
+      {
+        "answer": "Sprint Backlog",
+        "points": 0
+      },
+      {
+        "answer": "Retrospective",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "question": "Wofür steht die Abkürzung JSON?",
+    "answers": [
+      {
+        "answer": "Java Observer Node",
+        "points": 0
+      },
+      {
+        "answer": "Javascript Object Notation",
+        "points": 1
+      },
+      {
+        "answer": "Jingle Server Obligation Net",
+        "points": 0
+      },
+      {
+        "answer": "Javascript Online Negotiator",
+        "points": 0
+      }
+    ]
+  },
+  {
+    "question": "Was ist ein State (im Kontext der Webentwicklung)?",
+    "answers": [
+      {
+        "answer": "ein Bundesland",
+        "points": 0
+      },
+      {
+        "answer": "ein von React verwalteter Zustand",
+        "points": 1
+      },
+      {
+        "answer": "ein Datentyp",
+        "points": 0
+      }
+    ]
+  },
+  {
+    "question": "Was ist useEffect?",
+    "answers": [
+      {
+        "answer": "eine Animation-Funktion in React",
+        "points": 0
+      },
+      {
+        "answer": "ein Hook in React",
+        "points": 1
+      },
+      {
+        "answer": "eine React-Funktion, die auf bestimmte Ereignisse reagiert",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "question": "Was ist Middleware?",
+    "answers": [
+      {
+        "answer": "Funktionen die zwischen Anfrage und Antwort eines Requests ausgeführt werden",
+        "points": 1
+      },
+      {
+        "answer": "optionale Zusatz-Bausteine für das Express-Backend",
+        "points": 1
+      },
+      {
+        "answer": "das Mittelding zwischen Neuware und Second Hand",
+        "points": 0
+      }
+    ]
+  },
+  {
+    "question": "Wofür steht CORS?",
+    "answers": [
+      {
+        "answer": "Connected-Origin Resource Sourcing",
+        "points": 0
+      },
+      {
+        "answer": "Cross-Original Reference Sharing",
+        "points": 0
+      },
+      {
+        "answer": "Cross-Origin Resource Sharing",
+        "points": 1
+      }
+    ]
+  },
+  {
+    "question": "Warum lernen wir JavaScript?",
+    "answers": [
+      {
+        "answer": "weil es die einzige Programmiersprache ist, die der Browser versteht",
+        "points": 1
+      },
+      {
+        "answer": "um euch sinnlos zu quälen",
+        "points": 0
+      },
+      {
+        "answer": "weil man damit Front- und Backend programmieren kann",
+        "points": 1
+      }
+    ]
+  }
+]
