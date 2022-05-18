@@ -1,6 +1,7 @@
 import express from "express";
 import "dotenv/config";
 import mongoose from "mongoose";
+import bodyParser from "body-parser"; // damit man Daten an das Backend schicken kann (für Highscore)
 
 const app = express();
 
@@ -8,6 +9,10 @@ const app = express();
 
 const port = process.env.PORT;
 const mongo_connect = process.env.MONGO_CONNECTION;
+
+// ---------- Express Middleware ----------
+
+app.use(bodyParser.json());
 
 // ---------- Database ----------
 
@@ -60,15 +65,13 @@ app.get("/highscores", async (req, res) => {
 
 app.post("/highscores", async (req, res) => {
   try {
-    // In req.body kommt { player: X, points: Y }
-    console.log(req.body);
+    // In req.body kommt (hoffentlich) an: { player: X, points: Y }
+    console.log("req.body:", req.body);
     const newHighscore = new Highscore(req.body);
     await mongoose.connect(mongo_connect);
     const result = await newHighscore.save();
-    console.log(result);
-    // in Datenbank schreiben
-    // Rückmeldung - Erfolg/Error
-    res.send("In Progress");
+    console.log("result:", result);
+    res.send(result);
   } catch (err) {
     // Rückmeldung - Erfolg/Error
     res.send(err);
