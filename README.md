@@ -8,7 +8,7 @@
   - ein von React verwalteter Zustand (x)
   - ein Datentyp
 
-- Was ist useEffect() ?
+- Was ist useEffect?
 
   - eine Animation-Funktion in React
   - ein Hook in React (x)
