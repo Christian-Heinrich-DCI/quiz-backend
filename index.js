@@ -15,7 +15,7 @@ const { Schema } = mongoose;
 
 // ---------- Database: Questions ----------
 
-const questionsSchema = new Schema({
+const questionSchema = new Schema({
   question: String,
   answers: [
     {
@@ -25,35 +25,54 @@ const questionsSchema = new Schema({
   ],
 });
 
-const Questions = mongoose.model("Question", questionsSchema, "questions");
+const Question = mongoose.model("Question", questionSchema, "questions");
 
-// ---------- Database: Highscore ----------
+// ---------- Database: Highscores ----------
 
 const highscoreSchema = new Schema({
   player: String,
   points: Number,
 });
 
-const Players = mongoose.model("Player", highscoreSchema, "players");
+const Highscore = mongoose.model("Highscore", highscoreSchema, "highscores");
 
 // ---------- Routes ----------
 
 app.get("/questions", async (req, res) => {
-  await mongoose.connect(mongo_connect);
-  const questions = await Questions.find();
-  res.json(questions);
+  try {
+    await mongoose.connect(mongo_connect);
+    const questions = await Question.find();
+    res.json(questions);
+  } catch (err) {
+    res.send(err);
+  }
 });
 
-app.get("/players", async (req, res) => {
-  await mongoose.connect(mongo_connect);
-  const players = await Players.find();
-  res.json(players);
+app.get("/highscores", async (req, res) => {
+  try {
+    await mongoose.connect(mongo_connect);
+    const highscores = await Highscore.find();
+    res.json(highscores);
+  } catch (err) {
+    res.send(err);
+  }
 });
 
-app.post("/players/:id", async (req, res) => {
-  // await mongoose.connect(mongo_connect);
-  // const result = await Players.find();
-  // res.json(result);
+app.post("/highscores", async (req, res) => {
+  try {
+    // In req.body kommt { player: X, points: Y }
+    console.log(req.body);
+    const newHighscore = new Highscore(req.body);
+    await mongoose.connect(mongo_connect);
+    const result = await newHighscore.save();
+    console.log(result);
+    // in Datenbank schreiben
+    // Rückmeldung - Erfolg/Error
+    res.send("In Progress");
+  } catch (err) {
+    // Rückmeldung - Erfolg/Error
+    res.send(err);
+  }
 });
 
 //  ---------- Express ----------
