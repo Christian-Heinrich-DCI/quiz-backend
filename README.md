@@ -1,6 +1,41 @@
 # Quiz App
 
-## Fragen zum Thema Webentwicklung
+## Backend
+
+### Routes
+
+- GET: `/questions` - liefert ein Array mit allen Fragen zurück
+  - Format einer Frage:
+  ```js
+  {
+    question: String,
+    answers: [
+      {
+        answer: String,
+        points: Number
+      },
+        (...)
+    ]
+  }
+  ```
+- GET: `/highscores` - liefert ein Array mit allen Highscores zurück
+  - Format einer Highscore:
+  ```js
+  { player: String, points: Number }
+  ```
+- POST: `/highscores` - speichert eine Highscore in die Datenbank.
+  - Erwartet Format, wie z.B.:
+  ```js
+  { player: "NAME", points: 10 }
+  ```
+
+## Frontend
+
+### Texte
+
+... hier morgen mehr ...
+
+## Christians 5 Fragen zum Thema Webentwicklung
 
 - Was ist ein State (im Kontext der Webentwicklung)?
 
@@ -30,5 +65,3 @@
   - weil es die einzige Programmiersprache ist, die der Browser versteht (x)
   - um euch sinnlos zu quälen
   - weil man damit Front- und Backend programmieren kann (x)
-
-## Backend
