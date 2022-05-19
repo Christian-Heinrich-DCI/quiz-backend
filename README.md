@@ -4,7 +4,7 @@
 
 ### Routes
 
-- GET: `/questions` - liefert ein Array mit allen Fragen zurück
+- GET: `/questions` - liefert ein Array mit allen Fragen (im Moment: 3 - 5 Antworten pro Frage) zurück
   - Format einer Frage:
   ```js
   {
@@ -28,6 +28,13 @@
   ```js
   { player: "NAME", points: 10 }
   ```
+
+## Offene / Geklärte Fragen
+
+- Fragen werden nicht in einer bestimmten Reihenfolge angezeigt, sondern für jeden Gesamt-Quiz neu zufällig gemischt.
+  - Gedankennotiz: Shuffle Array Funktion aus dem Internet raussuchen
+- Es gibt nicht immer nur 3 Antworten, sondern (im Moment) bis zu 5.
+- Design
 
 ## Frontend
 
