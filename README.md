@@ -2,6 +2,10 @@
 
 ## Backend
 
+### Deployment
+
+https://quizz-app-christian.herokuapp.com/
+
 ### Routes
 
 - GET: `/questions` - liefert ein Array mit allen Fragen (im Moment: 3 - 5 Antworten pro Frage) zurück
