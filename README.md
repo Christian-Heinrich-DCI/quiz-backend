@@ -40,7 +40,36 @@
 
 ### Texte
 
-... hier morgen mehr ...
+### Texte
+
+#### Intro Screen
+
+- Willkommen:
+
+Teste dein Wissen um Webentwicklung! Als Spiel! Gar kein Druck! Bunte Knöpfe! Los gehts!
+
+- Wie geht das Quiz:
+
+Eine Frage, mindestens drei Antworten. Achtung, auch mehrere richtige Antworten sind möglich! Wähle deine Antwort(en) aus und klicke den “Nächste Frage”-Button. Nach 10 Fragen ist Schluss und du kannst dich in die Highscore eintragen. Viel Spaß!
+
+#### Quiz-Ende
+
+Du hast es geschafft und `<ERREICHT>` von `<GESAMT>` Punkten eingesammelt - das sind `<PROZENT>`%. (je nach erreichten Prozent:) Hurra! / Okay! / Ohjeh!
+
+#### Highscore-Screen
+
+Braucht keinen Text
+
+#### Impressum
+
+Webentwicklungs-Quiz
+
+Entstanden im Mai 2022 im Rahmen eines SCRUM-Übungsprojektes. Sprintdauer: 1,5 Tage.
+
+Frontend: Thomas (Link: https://github.com/Thomas-DCI/quiz-frontend)
+Backend: Christian (Link: https://github.com/Christian-Heinrich-DCI/quiz-backend)
+
+Die Dokumentation des Front-/Backends befindet sich in der README.md des jeweiligen Repositories.
 
 ## Christians 5 Fragen zum Thema Webentwicklung
 
