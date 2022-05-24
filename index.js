@@ -1,8 +1,8 @@
 import express from "express";
 import "dotenv/config";
 import mongoose from "mongoose";
-import bodyParser from "body-parser"; // damit man Daten an das Backend schicken kann (für Highscore)
 import cors from "cors";
+
 const app = express();
 
 // ---------- Enviroment Variables ----------
@@ -12,8 +12,9 @@ const mongo_connect = process.env.MONGO_CONNECTION;
 
 // ---------- Express Middleware ----------
 
-app.use(bodyParser.json());
+app.use(express.json());
 app.use(cors());
+
 // ---------- Database ----------
 
 const { Schema } = mongoose;
@@ -25,9 +26,9 @@ const questionSchema = new Schema({
   answers: [
     {
       answer: String,
-      points: Number
-    }
-  ]
+      points: Number,
+    },
+  ],
 });
 
 const Question = mongoose.model("Question", questionSchema, "questions");
@@ -36,7 +37,7 @@ const Question = mongoose.model("Question", questionSchema, "questions");
 
 const highscoreSchema = new Schema({
   player: String,
-  points: Number
+  points: Number,
 });
 
 const Highscore = mongoose.model("Highscore", highscoreSchema, "highscores");
