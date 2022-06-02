@@ -1,13 +1,10 @@
-[{
-  "_id": {
-    "$oid": "6284df85fe1f35a32b518871"
+[
+  {
+    "player": "Thomas",
+    "points": 10
   },
-  "player": "Thomas",
-  "points": 10
-},{
-  "_id": {
-    "$oid": "6284dfb7fe1f35a32b518872"
-  },
-  "player": "Christian",
-  "points": 8
-}]
+  {
+    "player": "Christian",
+    "points": 8
+  }
+]
