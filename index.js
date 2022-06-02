@@ -26,19 +26,22 @@ const questionSchema = new Schema({
   answers: [
     {
       answer: String,
-      points: Number,
-    },
-  ],
+      points: Number
+    }
+  ]
 });
 
 const Question = mongoose.model("Question", questionSchema, "questions");
 
 // ---------- Database: Highscores ----------
 
-const highscoreSchema = new Schema({
-  player: String,
-  points: Number,
-});
+const highscoreSchema = new Schema(
+  {
+    player: String,
+    points: Number
+  },
+  { timestamps: true }
+);
 
 const Highscore = mongoose.model("Highscore", highscoreSchema, "highscores");
 
